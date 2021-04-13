@@ -64,3 +64,22 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     console.log(request, sender, sendResponse)
     sendResponse('我收到了你的消息！');
 });
+
+
+$.ajax({
+   url: 'http://api.mopan.cbdll.net/v1/public/count',
+   type: 'GET',
+   // data: { 'txt': strText },
+   dataType: 'json',
+}).then(function (res) {
+   // 将正确信息返回content_script
+   console.log(res)
+   // const tabId = await getCurrentTabId()
+   // // 在背景页面发送消息，需要当前 tabID
+   // chrome.tabs.sendMessage(tabId, '我是background，我在发送消息', function (res) {
+   //    console.log('background：', res)
+   // });
+}, function () {
+   // 将错误信息返回content_script
+   // sendResponse({ 'status': 500 });
+});
