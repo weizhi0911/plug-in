@@ -4,16 +4,17 @@
 - 项目打包：cnpm run build
 
 ### 项目描述
-
+- 前台页为content.js内容，扩展页为background.js的内容
 - 本项目以打包后的 content.js 前台展示为主
 - 打包前前台页以打包后 content.js 为主，打包后以 init.js 请求到的文件 js,css 为主，请求回来的文件是以 content 文件里的 content.js 为入口打包的结果
-- 打包后js 文件加密混淆，文件拆分
+- 打包后 js 文件加密混淆，文件拆分
 
 ### 必备
 
 [谷歌插件官方文档](http://chrome.cenchy.com/history.html)
 [插件开发自动更新](https://github.com/xpl/crx-hotreload)
-- hot-reload.js热加载页面，不需要手动刷新插件生效
+
+- hot-reload.js 热加载页面，不需要手动刷新插件生效
 - hot-reload.js 须在引用到的地方引用，否则不生效
   例子：
 
@@ -97,3 +98,8 @@ function getCurrentTabId() {
     })
 }
 ```
+
+
+### 关于使用第三方接口请求不到数据
+
+- 例如：京东接口，先看有无配置域名权限，再看接口有无添加 Referer 请求头，background.js window.chrome.webRequest.onBeforeSendHeaders 里 urls 配置可以添加请求头的域名，要先在 manifest.json 里 permissions 配置添加 webRequest，否则不生效
