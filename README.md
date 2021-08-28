@@ -1,10 +1,19 @@
 # 谷歌插件从零开发
 
+- 项目启动：cnpm run build-watch
+- 项目打包：cnpm run build
+
+### 项目描述
+
+- 本项目以打包后的 content.js 前台展示为主
+- 打包前前台页以打包后 content.js 为主，打包后以 init.js 请求到的文件 js,css 为主，请求回来的文件是以 content 文件里的 content.js 为入口打包的结果
+- 打包后js 文件加密混淆，文件拆分
+
 ### 必备
 
 [谷歌插件官方文档](http://chrome.cenchy.com/history.html)
 [插件开发自动更新](https://github.com/xpl/crx-hotreload)
-
+- hot-reload.js热加载页面，不需要手动刷新插件生效
 - hot-reload.js 须在引用到的地方引用，否则不生效
   例子：
 

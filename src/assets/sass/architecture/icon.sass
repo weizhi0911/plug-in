@@ -1,0 +1,57 @@
+.g-icon-success
+  $border-width: 2px
+
+  display: inline-block
+  width: 8px
+  height: 16px
+
+  border-right-width: $border-width
+  border-bottom-width: $border-width
+  border-top-width: 0
+  border-left-width: 0
+  border-color: #fff
+  border-style: solid
+
+  transform: rotate(45deg)
+
+.g-icon-close
+  $width: 20px
+  $width-line: 2px
+  $height-line: $width - 8px
+  $rotate-line: 45deg
+  $border-size: 1px
+  $mask: $width + 14px
+
+  position: relative
+  box-sizing: border-box
+  display: inline-block
+  width: $width
+  height: $width
+  border-radius: 50%
+  cursor: pointer
+  background-color: #999
+  border: $border-size solid #999
+
+  &.mask
+    position: absolute
+    right: -$mask
+    top: -$mask
+    border-color: #fff
+    background-color: rgba(255,255, 255, 0.3)
+
+  &:before,
+  &:after
+    content: ''
+    position: absolute
+    left: ($width - $width-line) / 2  - $border-size
+    top: ($width - $height-line) / 2  - $border-size
+    width: $width-line
+    height: $height-line
+    border-radius: $width-line
+    background-color: #fff
+
+  &:before
+    transform: rotate($rotate-line)
+
+  &:after
+    transform: rotate(-$rotate-line)

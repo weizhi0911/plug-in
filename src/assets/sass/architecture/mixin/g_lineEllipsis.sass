@@ -1,0 +1,7 @@
+/* 超过几行就在尾行显示省略符并隐藏其余文字 */
+@mixin g_lineEllipsis($line: 2)
+  display: -webkit-box
+  -webkit-line-clamp: $line
+  -webkit-box-orient: vertical
+  word-break: break-all
+  overflow: hidden

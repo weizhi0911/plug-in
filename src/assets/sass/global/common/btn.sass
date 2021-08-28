@@ -1,0 +1,54 @@
+.g-btn
+  box-sizing: border-box
+  border-radius: 4px
+
+  &.main
+    padding: 6px 10px
+    color: #fff
+    background-color: #7f57ff
+
+  &.ellipse
+    padding: 8px 14px
+    color: #7f57ff
+    background-color: #F2EEFF
+
+  &.border-active
+    border: 1px solid #7f57ff
+
+  &.border-primary
+    border: 1px solid #3585FC
+
+  &.plain
+    background-color: #fff
+
+  &.block
+    width: 100%
+
+  &.radius
+    border-radius: 50%
+
+  &.bg-main
+    width: 150px
+    height: 36px
+    color: #fff
+    background: linear-gradient(270deg, #A98EFF, #7F57FF)
+    border-radius: 6px
+    margin: 7px auto
+
+    &:hover
+      background: #7F57FF
+
+    .icon
+      margin-right: 4px
+      transform: translateY(1px)
+
+  &[disabled]
+    cursor: not-allowed !important
+
+    &.cutout
+      color: #999 !important
+      border-color: #ccc !important
+
+    &.fill
+      color: #fff !important
+      background-color: #D9D9D9 !important

@@ -1,0 +1,26 @@
+@mixin g_list_flex1($mr-item: 10px, $mr-item-child: 4px)
+  width: 100%
+
+  &, > *
+    display: flex
+    align-items: center
+
+  > *
+    >:first-child
+      margin-right: $mr-item-child
+
+    &:not(:last-child)
+      margin-right: $mr-item
+
+    &:not(:only-child)
+      text-align: left
+
+    &, &:only-child >*
+      flex: 1
+
+    &:only-child
+      >:first-child
+        text-align: right
+
+      >:last-child
+        text-align: left

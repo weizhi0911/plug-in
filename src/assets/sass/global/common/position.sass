@@ -1,0 +1,30 @@
+.g-poa
+  position: absolute
+
+.g-por
+  position: relative
+
+.g-pof
+  position: fixed
+
+.g-poa-center
+  @extend .g-poa
+  z-index: 400
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+
+.g-poa-top
+  @extend .g-poa
+  z-index: 400
+  left: 50%
+  top: 100px
+  transform: translateX(-50%)
+
+.g-po-top
+  top: 70%
+
+.g-pof-top
+  @extend .g-pof
+  top: 0
+  z-index: 2000

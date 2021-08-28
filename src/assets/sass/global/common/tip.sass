@@ -1,0 +1,138 @@
+
+.g-tip
+  $borderSize: 6px
+  $distance: 24px
+  $bgc: rgba(0, 0, 0, 0.8)
+  $color: #fff
+
+  box-sizing: border-box
+  width: max-content
+  padding: 8px
+  border-radius: 2px
+  color: $color
+  background-color: $bgc
+
+  &.box-shadow
+    box-shadow: 0 0 3px rgba(0,0,0,0.16)
+
+  &:before
+    content: ''
+
+  &, &:before
+    position: absolute
+    z-index: 10
+
+  &.bottom, &.top
+    &:not(.normal)
+      &, &:before
+        left: 50%
+        transform: translateX(-50%)
+
+    &:before
+      border-left: $borderSize solid transparent
+      border-right: $borderSize solid transparent
+
+  &.left, &.right
+    &:not(.normal)
+      &, &:before
+        top: 50%
+        transform: translateY(-50%)
+
+    &:before
+      border-top: $borderSize solid transparent
+      border-bottom: $borderSize solid transparent
+
+  &.bottom
+    bottom: $distance
+
+    &:before
+      top: 100%
+
+      border-top: $borderSize solid $bgc
+
+  &.top
+    top: $distance
+
+    &:before
+      bottom: 100%
+
+      border-bottom: $borderSize solid $bgc
+
+  &.left
+    left: $distance
+
+    &:before
+      right: 100%
+
+      border-right: $borderSize solid $bgc
+
+  &.right
+    right: $distance
+
+    &:before
+      left: 100%
+
+      border-left: $borderSize solid $bgc
+
+  &.recommend
+    left: calc(100% + 6px)
+    top: 0px
+    padding: 10px
+    margin-left: 12px
+    background-color: $bgc
+
+    &:not(.normal)
+      &:before
+        top: 14px
+        border-bottom-color: $bgc
+        border-left: $borderSize solid transparent
+
+    &, &:before
+      transform: none
+
+  &.radius
+    border-radius: 4px
+
+  &.white
+    $bgc: #fff
+
+    color: #333
+    background-color: $bgc
+
+    &.bottom:before
+      border-top-color: $bgc
+    &.top:before
+      border-bottom-color: $bgc
+    &.left:before
+      border-right-color: $bgc
+    &.right:before
+      border-left-color: $bgc
+
+    &:bofore
+
+  &.triangle-left:before
+    left: 10px
+
+  &.none
+    padding: 0
+    background-color: transparent
+
+    &:before
+      border: 0
+
+.g-tip-wrap
+  position: relative
+  cursor: pointer
+
+  .g-tip
+    &:not(.show)
+      display: none
+
+  &:not(.show)
+    &:hover
+      .g-tip-wrap .g-tip
+        display: none
+
+      &, &.children
+        .g-tip
+          display: block

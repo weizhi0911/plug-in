@@ -1,0 +1,182 @@
+@import @archSass/mixin/g_coupon
+
+/* 清除浮动 S */
+.g-clearfix:after
+  content: ''
+  display: block
+  clear: both
+/* 清除浮动 E */
+
+/* 必填符号 E */
+.g-required:before
+  content: '*'
+  color: #F56C6C
+  margin-right: 4px
+/* 必填符号 E */
+
+.g-full-page
+  // 子元素绝对定位，继承父元素 min-height
+  position: absolute
+  min-height: 100%
+  width: 100%
+
+.g-text-ellipsis
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+.g-mask-duotu
+  position: absolute
+  z-index: 999999999999999
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  font-family: "Microsoft Yahei"
+
+  background-color: rgba(0, 0, 0, 0.4)
+  .icon
+    width: 16px
+    height: 16px
+    vertical-align: -0.15em
+    fill: currentColor
+    overflow: hidden
+    flex: none !important
+  &.fixed
+    position: fixed
+    z-index: 999999999999999
+    width: 100vw
+    height: 100vh
+
+  &:not(.move)
+    text-align: center
+
+    >:first-child,
+    &:after
+      display: inline-block
+      vertical-align: middle
+
+    >:first-child
+      text-align: left
+
+    &:after
+      content: ''
+      width: 0
+      height: 100%
+
+.g-hover-listitem
+  &:not(.cancel-hover):hover
+    transform: translateY(-4px)
+    box-shadow: 0 4px 12px 2px rgba(0, 0, 0,.1)
+    transition: all .2s ease-in-out
+    z-index: 600
+
+    .other-data,
+    .features-wrap,
+    .shop-desc
+      display: block
+
+.g-line
+  height: 1px
+  opacity: 0.15
+  background-color: #fff
+
+.g-fwb
+  font-weight: bold
+
+.g-fwn
+  font-weight: normal
+
+.g-cursor-pointer
+  cursor: pointer
+
+.g-cursor-default
+  cursor: default
+
+.g-cursor-move
+  cursor: move
+
+  &.children *
+    cursor: move !important
+
+.g-line-through
+  text-decoration: line-through
+
+.g-text-underline
+  text-decoration: underline
+
+.g-usn
+  user-select: none
+
+.g-bs-bb
+  box-sizing: border-box
+
+.g-bs-cb
+  box-sizing: content-box
+
+.g-tal
+  text-align: left
+
+.g-tac
+  text-align: center
+
+.g-tar
+  text-align: right
+
+.g-width-max-content
+  width: max-content
+
+.g-flex-enable-ellipsis
+  min-width: 0
+
+.g-coupon-wrap
+  $height: 24px
+  $bgc: #F07F15
+  $size: 3px
+  $border-radius: 4px
+  $color: #fff
+  $padding-coupon: 12px
+
+  display: inline-block
+  padding-left: $size
+  padding-right: $size
+  height: $height
+  line-height: $height
+
+  text-align: center
+  border-radius: $border-radius
+  color: $color
+
+  @include g_coupon($height, $bgc, $size)
+
+  .g-coupon
+    display: inline-block
+    background-color: $bgc
+    padding-left: $padding-coupon
+    padding-right: $padding-coupon
+
+.g-unfold
+  display: inline-block
+  transform: rotate(180deg)
+
+.g-box
+  width: 100%
+  height: 100%
+
+.g-full-width
+  width: 100%
+
+.g-full-height
+  height: 100%
+
+.g-db
+  display: block
+
+.g-di
+  display: inline
+
+.g-dib
+  display: inline-block
+
+.late-3
+  transform: translateY(-3px)

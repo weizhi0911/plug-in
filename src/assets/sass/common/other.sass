@@ -1,0 +1,75 @@
+#duotu-plug-in
+  .t-del
+    text-decoration: line-through
+
+  .t-b-del
+    text-decoration: underline
+    color: rgb(53, 133, 252) !important
+
+  .t-b
+    color: rgb(53, 133, 252) !important
+
+  .g-mask-duotu
+    position: absolute
+    z-index: 999999999999999
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    font-family: "Microsoft Yahei"
+    background-color: rgba(0, 0, 0, 0.4)
+    .icon
+      width: 16px
+      height: 16px
+      vertical-align: -0.15em
+      fill: currentColor
+      overflow: hidden
+      flex: none !important
+    &.fixed
+      position: fixed
+      z-index: 10000
+      width: 100vw
+      height: 100vh
+
+    &:not(.move)
+      text-align: center
+
+      >:first-child,
+      &:after
+        display: inline-block
+        vertical-align: middle
+
+      >:first-child
+        text-align: left
+
+      &:after
+        content: ''
+        width: 0
+        height: 100%
+
+  .no-data
+    width: 100%
+    height: 100%
+    span
+      margin-top: 5px
+      color: #999
+
+  .g-bgc-orange
+    color: #FA6936
+.g-cursor-pointer
+  cursor: pointer
+
+.g-us-s
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+.g-text-ellipsis
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+.y1
+  transform: translateY(1px)

@@ -1,0 +1,24 @@
+/* input的placeholder颜色 */
+@mixin g_placeholder($color: #939599, $fontSize: 12px)
+  &::-webkit-input-placeholder
+    /* WebKit, Blink, Edge */
+    color: $color
+    font-size: $fontSize
+
+
+  &:-moz-placeholder
+    /* Mozilla Firefox 4 to 18 */
+    color: $color
+    font-size: $fontSize
+
+
+  &::-moz-placeholder
+    /* Mozilla Firefox 19+ */
+    color: $color
+    font-size: $fontSize
+
+
+  &:-ms-input-placeholder
+    /* Internet Explorer 10-11 */
+    color: $color
+    font-size: $fontSize

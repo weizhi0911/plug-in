@@ -1,0 +1,41 @@
+@import ./mixin/g_setAnimation
+@import ./keyframe
+
+.fade-enter-active,
+.fade-leave-active
+  transition: opacity .5s
+
+.fade-enter,
+.fade-leave-to
+  opacity: 0
+
+.g-animation-radar
+  opacity: 0
+  animation: radar 3s linear infinite
+
+.g-fade-in-left
+  @include g_setAnimation(fade-in-left, $duration-fade-in)
+
+.g-fade-in-right
+  @include g_setAnimation(fade-in-right, $duration-fade-in)
+
+.g-fade-in-top
+  @include g_setAnimation(fade-in-top, $duration-fade-in)
+
+.g-fade-in-bottom
+  @include g_setAnimation(fade-in-bottom, $duration-fade-in)
+
+.g-bounce-in
+  @include g_setAnimation(bounce-in, $duration-bounce-in)
+
+.g-spin-left
+  @include g_setAnimation(spin-left, $duration-spin, linear, infinite)
+
+.g-spin-right
+  @include g_setAnimation(spin-right, $duration-spin, linear, infinite)
+
+.g-row-up
+  @include g_setAnimation(row-up, $duration-row-up, linear, infinite)
+
+.g-spinner
+  @include g_setAnimation(spinner, $duration-spinner, linear, infinite)

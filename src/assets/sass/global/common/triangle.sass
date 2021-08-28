@@ -1,0 +1,27 @@
+.g-triangle
+  $borderSize: 8px
+  $borderColor:  #C4C7CC
+
+  &.left, &.right, &.top, &.bottom
+    display: inline-block
+    border-radius: $borderSize / 2
+
+  &.left
+    border-bottom: $borderSize solid transparent
+    border-top: $borderSize solid transparent
+    border-right: $borderSize solid $borderColor
+
+  &.right
+    border-bottom: $borderSize solid transparent
+    border-top: $borderSize solid transparent
+    border-left: $borderSize solid $borderColor
+
+  &.top
+    border-left: $borderSize solid transparent
+    border-right: $borderSize solid transparent
+    border-bottom: $borderSize solid $borderColor
+
+  &.bottom
+    border-left: $borderSize solid transparent
+    border-right: $borderSize solid transparent
+    border-top: $borderSize solid $borderColor

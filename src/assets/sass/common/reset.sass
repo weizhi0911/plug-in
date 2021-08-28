@@ -1,0 +1,112 @@
+#DUOTU
+  width: max-content
+/* 初始化样式 */
+div,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input,
+button,
+a,
+table,
+thead,
+tbody,
+tr,
+th,
+td,
+blockquote,
+img
+  margin: 0
+  padding: 0
+
+input,
+button,
+select,
+textarea,
+audio,
+video
+  outline: none
+  border: none
+
+textarea
+  resize: none
+
+ul li
+  list-style: none
+
+ol li
+  list-style-type: decimal
+
+i,
+em
+  font-style: normal
+
+a
+  text-decoration: none
+  cursor: pointer
+
+  // 去除移动端 a 标签点击会有蓝色的背景色
+  -webkit-tap-highlight-color: transparent
+
+  &:hover
+    text-decoration: underline
+    text-decoration: none
+
+img
+  border: none
+  // img标签2px间隙解决方案
+  // vertical-align: bottom
+
+table
+  border-spacing: 0
+
+button
+  background-color: unset
+  cursor: pointer
+
+/* 去除浏览器输入框类型为数字 增加的上下箭头 */
+input
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button
+    -webkit-appearance: none !important
+
+  &[type="number"]
+    -moz-appearance: textfield
+
+/* 谷歌浏览器输入框记住账号密码后的背景色 */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill
+  background-color: transparent
+  background-image: none
+  transition: background-color 50000s ease-in-out 0s
+
+#duotu-plug-in
+  background-color: #fff
+  position: relative
+  z-index: 99999999999999999 !important
+  margin-bottom: 5px
+  font-size: 12px
+  margin-top: 5px
+  font-family: Microsoft YaHei !important
+  width: auto
+  .icon
+    width: 16px
+    height: 16px
+    vertical-align: -0.15em
+    fill: currentColor
+    overflow: hidden
+    flex: none !important
+  img
+    vertical-align: bottom

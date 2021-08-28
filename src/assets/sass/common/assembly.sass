@@ -1,0 +1,318 @@
+//! 组件公共样式
+//* 标题
+.plug-title
+  line-height: 35px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  .title
+    color: #333333
+    position: relative
+    padding-left: 8px
+    font-weight: bold
+    &::before
+      content: ""
+      display: inline-block
+      width: 2px
+      height: 11px
+      background: #8964FF
+      position: absolute
+      left: 0px
+      top: 50%
+      transform: translateY(-50%)
+    .sp
+      color: #999999
+      font-weight: normal
+
+.g-tip-wrap
+  position: relative
+  cursor: pointer
+  .g-tip
+    &:not(.show)
+      display: none
+
+  &:not(.show)
+    &:hover
+      .g-tip-wrap .g-tip
+        display: none
+
+      &, &.children
+        .g-tip
+          display: block
+
+//* Tips
+.g-tip
+  $borderSize: 6px
+  $distance: 24px
+  $bgc: rgba(0, 0, 0, 0.8)
+  $color: #fff
+
+  box-sizing: border-box
+  width: max-content
+  padding: 3px 6px !important
+  border-radius: 2px
+  color: $color
+  background-color: $bgc
+
+  &.box-shadow
+    box-shadow: 0 0 3px rgba(0,0,0,0.16)
+
+  &:before
+    content: ''
+
+  &, &:before
+    position: absolute
+    z-index: 10
+
+  &.bottom, &.top
+    &:not(.normal)
+      &, &:before
+        left: 50%
+        transform: translateX(-50%)
+
+    &:before
+      border-left: $borderSize solid transparent
+      border-right: $borderSize solid transparent
+
+  &.left, &.right
+    &:not(.normal)
+      &, &:before
+        top: 50%
+        transform: translateY(-50%)
+
+    &:before
+      border-top: $borderSize solid transparent
+      border-bottom: $borderSize solid transparent
+
+  &.bottom
+    bottom: $distance
+
+    &:before
+      top: 100%
+
+      border-top: $borderSize solid $bgc
+
+  &.top
+    top: $distance
+
+    &:before
+      bottom: 100%
+
+      border-bottom: $borderSize solid $bgc
+
+  &.left
+    left: $distance
+
+    &:before
+      right: 100%
+
+      border-right: $borderSize solid $bgc
+
+  &.right
+    right: $distance
+
+    &:before
+      left: 100%
+
+      border-left: $borderSize solid $bgc
+
+  &.recommend
+    left: calc(100% + 6px)
+    top: 0px
+    padding: 10px
+    margin-left: 12px
+    background-color: $bgc
+
+    &:not(.normal)
+      &:before
+        top: 14px
+        border-bottom-color: $bgc
+        border-left: $borderSize solid transparent
+
+    &, &:before
+      transform: none
+
+  &.radius
+    border-radius: 4px
+
+  &.white
+    $bgc: #fff
+
+    color: #333
+    background-color: $bgc
+
+    &.bottom:before
+      border-top-color: $bgc
+    &.top:before
+      border-bottom-color: $bgc
+    &.left:before
+      border-right-color: $bgc
+    &.right:before
+      border-left-color: $bgc
+
+    &:bofore
+
+  &.triangle-left:before
+    left: 10px
+
+  &.none
+    padding: 0
+    background-color: transparent
+
+    &:before
+      border: 0
+
+//* table
+.g-table
+  margin: 0 auto
+  table-layout: fixed
+  font-size: 12px
+  width: 100%
+  box-sizing: border-box
+
+  &.border
+    border: 1px solid #EEEEEE
+    th:not(:last-child),td:not(:last-child)
+      border-right: 1px solid #EEEEEE
+    th
+      border-bottom: 1px solid #EEEEEE
+    tr:not(:last-child)
+      border-bottom: 1px solid #EEEEEE
+
+  tbody
+    display: block
+
+    tr
+      overflow: hidden
+
+  &.normal
+    thead,
+    thead th,
+    tbody tr,
+    tbody tr td
+      display: flex
+      align-items: center
+
+      height: 100%
+
+    thead
+      height: 23px
+      background-color: #F1F5F9
+      color: #333
+
+      th
+        font-weight: normal
+
+    tbody
+      color: #666
+
+      tr
+        height: 22px
+
+        // &:nth-of-type(even)
+        //   background-color: #F8FAFC
+
+  &.flex-1
+    thead th,
+    tbody tr td
+      flex: 1
+
+  &.bd
+    tbody tr
+      border-bottom: 1px solid #EDF0F3
+
+  &.center
+    thead th,
+    tbody tr td
+      justify-content: center
+      // justify-content: flex-start
+      padding-left: 4px
+
+  &.modal
+    tbody
+      overflow-y: auto
+
+.g-table.chanel-table
+  th,tr,td
+    border: 0
+  thead
+    height: 40px
+  tbody tr
+    height: 30px
+    &:nth-of-type(even)
+      background-color: #F8FAFC
+
+.show-scroll
+  overflow-y: auto
+  overflow-x: hidden
+  // &::-webkit-scrollbar-corner
+  //   background: #09172c
+
+  &::-webkit-scrollbar
+    width: 4px
+    height: 4px
+    // background-color: rgba(42, 71, 85, .4)
+    background: #F7F7F7
+    border-radius: 0.25rem
+
+    // &:hover
+    //   // 放上底
+    //   background-color: rgba(42, 71, 85, 1)
+
+  &::-webkit-scrollbar-track
+    // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3)
+    border-radius: 0.25rem
+    background-color: #F7F7F7
+
+  &::-webkit-scrollbar-thumb:vertical
+    border: none !important
+    outline: none !important
+
+  &::-webkit-scrollbar-thumb
+    border-radius: 4px
+    background-color: #CCCCCC
+
+  &::-webkit-scrollbar-track-piece
+    background: transparent !important
+
+  //这是自定义loading区域的样式，当然，你可以随意修改，我这个是仿照ElementUI的样式进行设置的
+.loading-father-p
+  position: relative !important
+
+.loading-father-o
+  // overflow: hidden !important
+
+.duotu-loading
+  width: 100%
+  height: 100%
+  background: #fff
+  position: absolute
+  left: 0
+  top: 0
+  bottom: 0
+  right: 0
+  z-index: 9999999
+  text-align: center
+  display: flex
+  align-items: center
+  justify-content: center
+  .icon
+    color: #7F57FF
+    width: 40px !important
+    height: 40px !important
+    vertical-align: -0.15em
+    fill: currentColor
+    overflow: hidden
+    flex: none !important
+  .refleash
+    animation: refleashRotate 3s linear infinite
+  @keyframes refleashRotate
+    0%
+      transform: rotate(0)
+    100%
+      transform: rotate(360deg)
+
+.duotu-copy-img
+  height: 0px
+  width: 0px
+  overflow: hidden

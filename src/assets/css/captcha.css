@@ -1,0 +1,291 @@
+@font-face {
+  font-family: 'captcha';
+  src: url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAASQAAsAAAAACYAAAARCAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDXgqFWIRrATYCJAMcCxAABCAFhG0HVxs6CBEVnMfJvsLGNShlwpagM3zaBspvQ/bQnuD/gZ0BK1AAAAAAQPA86dT3dWcIgeQCAcgJyyWmrVOmEoGsfr/t3j3DtEESTS4h/iFRi7ZMKRYakQD4+5sNey/BOt+kGeb1xVrAe4ku29rly8/ZgI3KCVOSs8dgiy8tp5ef0eC5lRfQTGaj7R3Gb4MTFkEdHEv9FM/7tnfJ7FXjWmBAUU3DCpANZDwgnY3h8vwq0LFqPvt0CCCcKqWQRk20A/wYaD0ByKjhfQn8BR2mo1gIENewq4aLsAQj05gBC6OflzeoIH5gYBW0abshqgH1nvPljLVdm7Mg4B/OAoz3AgpQCtBA0hptNtAkVgpFfPk3DREQTUBwz/l8tdrPDzx//LL67xbbabKQ5hjwYg/7jycYIF6sLBLYbnEveC6el8lrQ4MH8q3QoCA/AA0C+WMwYYCX1QUfl8wnu0QDwgB3QfJBikqRzHgN3AEVI3Ppli0eWoePvv7pcuPb9dq789VXj65bcM+2xE5d1m27bLNzp9neHQp07byE9gatod34iJlrOASvN7BKrLCsCy0cawWrrSJ0tBWJO8LNq62Wrdt/PBC4gSHTXG4W9hyXYUtQfLmkmfuv5QdnmbmvStFX9ku8Co61o7TIzmyXEZSwxArSox24XgBDK60uKxyiZcsj0L5W3yw+sJxvHtoTl9VmYVp6eWB7hHWj7cqNB04MjbxszsVzboGNQ/aN0dHTBxSxV8dh6YD6F/T3k5TZwglE2WLD7mRk5ii4aJWTGblX2wVyDNlYJGNVjorZV2emO87oVefPkUmY++Pl/q9mVX+uUE3qFpwQa1TfdzZ+aA5Drv/yiceuHB3cych65RNrTShU8A8K7wneqvSPvHSxF11OWrK0/rbjQh3fQzKcgj+uYk8TVVgmH47XKpgf4b/2G71w3HLgGkT79+/vtGI9mqB3Zm62HqfoK9HPV7XQvKIZpWs92OtXWR9YmaN+jScLcwBwU1VpAwD1QbKAe+h1jQP3VURxAFQv4y5we72nDf9av4OyMmxuTmt926AGwJ0iWq/I46aa0sn4f8ih5v+R+MoBeiUkvU8vuvcNCMDH40BckYTzBPD3ccVz/3AKU10IQqCUgYGnAopADamxPfCQYAheAhsIp0vTvSMoMAEFdRigBKkGSJaDIKR5gpIlC2mw98BS5h04sqIgzkkSDpmgIZZ6d61IDQVlF6pzGdgZbRcXf6E8dKnmhRHuD+rqIIVeUE7eY4AeYgt3LCMzJlbp6c6cDV0nNKo0yM2rzMa973PTPXm59JMd14rUUFB2oTqXgWV621W+/wvloUu1o8sl6x/U1Qun0AsUyHvZoOryUu7ijmVkxsQqPd0ZCzqOCY3NKzXIzat2iIx73w7FWpl3ekX/BnLHPaBLehEqDS0dPQOWg1VF56b1WsHuEK5aqhyGYuX+D6li4Uy0kwkAAA==')
+    format('woff2');
+}
+
+[class^='icaptcha-'],
+[class*=' icaptcha-'] {
+  font-family: 'captcha' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: gayscale;
+}
+.icaptcha-refresh {
+  line-height: 1.5;
+}
+.icaptcha-error:before {
+  content: '\e6ae';
+}
+.icaptcha-refresh:before {
+  content: '\e6a3';
+}
+.icaptcha-tri:before {
+  content: '\e6e2';
+}
+.icaptcha-round:before {
+  content: '\e839';
+}
+.icaptcha-square:before {
+  content: '\e63d';
+}
+.icaptcha-star:before {
+  content: '\e601';
+}
+
+i,
+em {
+  font-style: normal;
+}
+
+.dt-mantle {
+  background-color: #f0f0f0;
+  width: 100%;
+  height: 120px;
+  border: 1px solid #f0f0f0;
+  box-sizing: border-box;
+}
+.dt-mantle button {
+  width: 280px;
+  height: 40px;
+  background: linear-gradient(-270deg, #3585fc, #35a6fc);
+  font-family: "Microsoft YaHei";
+
+  display: inline-block;
+  color: #fff;
+  border-radius: 4px;
+}
+.dt-mantle button .icon {
+  transform: translateY(1px);
+}
+.dt-mantle button:hover {
+  background: #3585fc;
+}
+
+.xcaptcha {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: none;
+  user-select: none;
+  font-family: 'Open Sans', 'Arial', 'PingFangSC-Light', 'Microsoft Yahei',
+    sans-serif;
+}
+.xcaptcha.xon {
+  display: block;
+  z-index: 99999999999999999;
+}
+.xcaptcha_bg {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.xcaptcha_in {
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 6px solid #fff;
+}
+.xcaptcha_p {
+  position: relative;
+  user-select: none;
+}
+.xcaptcha_p p {
+  height: 32px;
+  line-height: 32px;
+  font-size: 13px;
+  color: #222;
+  background-color: #fff;
+  padding: 0 10px;
+  margin: 0;
+}
+.xcaptcha_p .xcaptcha_rebtn {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.xcaptcha_p .iconclose {
+  position: absolute;
+  top: 50%;
+  right: 27px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.xcaptcha_p .xcaptcha_rebtn i {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: top;
+  transform: translate(1px, -5px);
+}
+/* .xcaptcha_p .xcaptcha_rebtn:hover i {transform:rotate(45deg);} */
+.xcaptcha_imgbox {
+  position: relative;
+  cursor: pointer;
+  min-height: 160px;
+}
+.xcaptcha_imgbox img {
+  vertical-align: middle;
+}
+.xcaptcha_cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.xcaptcha_poi {
+  width: 22px;
+  height: 22px;
+  background-color: rgba(26, 177, 30, 0.8);
+  position: absolute;
+  z-index: 3;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+}
+.xcaptcha_poi p {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  margin: 0;
+}
+.xcaptcha_alert {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 4;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.xcaptcha_alert.xout {
+  animation-name: xcaptcha_out;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes xcaptcha_out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.xcaptcha_alertin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.xcaptcha_error {
+  font-size: 14px;
+  color: #222;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+}
+.xcaptcha_error i {
+  font-size: 20px;
+  color: red;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.xcaptcha_error.xon {
+  animation-name: xcaptcha_shake;
+  animation-duration: 0.4s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+@keyframes xcaptcha_shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+.xcaptcha_load {
+  text-align: center;
+}
+.xcaptcha_load span {
+  width: 4px;
+  height: 8px;
+  background-color: #4983ec;
+  display: inline-block;
+  margin: 0 4px;
+  animation: xcaptcha_load;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.xcaptcha_load span:nth-child(1) {
+  animation-delay: 0s;
+}
+.xcaptcha_load span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.xcaptcha_load span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+@keyframes xcaptcha_load {
+  0%,
+  60%,
+  100% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scaleY(3);
+  }
+}
