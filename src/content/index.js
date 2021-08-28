@@ -92,7 +92,7 @@ import '@/main.js'
 //     statisticalVersionPlatform(1)
 //   }
 // }
-
+alert(1)
 //当前页面监视键盘输入
 document.onkeydown = function(e) {
   //事件对象兼容

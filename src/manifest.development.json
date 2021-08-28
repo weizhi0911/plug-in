@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "多兔淘客助手（开发测试）",
-  "description": "多兔淘客助手，助你快速查看商品概览数据，掌握商品概况；查看商品最高佣金，发现隐藏定向佣金和隐藏优惠券；推广数据详细查阅，一键快速放单；商品历史信息一目了然；商家信息、联系方式全包含；招商团队信息查询，更便于联系招商合作。",
+  "name": "项目名字xxxx（开发测试）",
+  "description": "项目功能描述xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
   "version": "1.4.0.1",
   "options_page": "options.html",
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';style-src 'self' 'unsafe-inline';",
@@ -152,7 +152,6 @@
         "https://npcitem.jd.hk/*",
         "https://coupon.m.jd.com/*",
         "https://*.yiyaojd.com/*"
-x
       ],
       "js": ["js/hot-reload.js", "js/content.js"],
       "css": ["css/content.css"],
