@@ -12,19 +12,6 @@ const JavaScriptObfuscator = require('webpack-obfuscator');
 const pagesObj = {};
 const chromeName = ['popup', 'options'];
 
-// const cdn = {
-//   css: [
-//     // 'https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.2/theme-chalk/index.css',
-//     // 'https://cdn.bootcdn.net/ajax/libs/ant-design-vue/1.6.3/antd.min.css'
-//   ],
-//   js: [
-//     "https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js",
-//     "https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.min.js",
-//     "https://cdn.bootcdn.net/ajax/libs/qs/6.9.4/qs.min.js",
-//     "sakdlskd",
-//   ],
-// };
-
 const externals = {
   vue: 'Vue',
   echarts: 'echarts',

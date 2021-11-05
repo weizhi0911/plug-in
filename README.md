@@ -38,7 +38,7 @@
         {
             "matches": [
                 "*://*/*",
-                "*://*.duotu.pro/*"
+                "*://*.baidu.com/*"
             ],
             "css": [
                 "css/contents.css"
